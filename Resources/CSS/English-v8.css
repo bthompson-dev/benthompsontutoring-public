@@ -1,0 +1,436 @@
+/* General */
+
+* {
+  font-family: 'Libre Baskerville', serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+html,body {
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+
+p {
+  font-family: 'Noto Sans KR', sans-serif;
+  padding-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.italic {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 1.7rem;
+  padding-bottom: 2rem;
+}
+
+.link {
+  display: block;
+  margin-top: -7rem;
+  padding-bottom: 7rem;
+}
+
+/* Nav bar */
+
+nav {
+  width: 100%;
+  position: fixed;
+  background-color: #183781;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+nav a {
+  display: block;
+  padding: 2.5rem 1.2rem;
+  min-width: 150px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #45567d;
+}
+
+.tutoring-logo {
+  float: left;
+  max-width: 140px;
+  z-index: 2;
+  margin: 1rem;
+  align-self: flex-start;
+}
+
+@media (max-width: 1100px) {
+  .tutoring-logo {
+    max-width: none;
+    width: 15vh;
+    height: 8vh;
+    padding: 1vh;
+    margin: 0.5vh;
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.dropdown-content ul {
+  flex-direction: column;
+  background-color: #183781;
+  min-width: 100px;
+  list-style-type: none;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.6rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media (max-width: 1100px) {
+  #web-menu {
+    display: none;
+  }
+}
+
+#mobile-menu {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  #mobile-menu {
+    display: initial;
+  }
+}
+
+/*Mobile Menu*/
+ /* Dropdown Button */
+ .dropbtn {
+  color:#183781;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  width: 4.5vh;
+  height: 4.5vh;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.mobile-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.mobile-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #183781;
+  opacity: 0.9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 9vh;
+  left: 0;
+  width: 100%;
+}
+
+/* Links inside the dropdown */
+.mobile-dropdown-content a {
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem 0.5rem;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* Change color of dropdown links on hover */
+.mobile-dropdown-content a:hover {background-color: #45567d}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;} 
+
+/*Banner */
+
+#welcome-section {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../Images/DSC_0003-1K5-9.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  line-height: 1.5;
+  position: fixed;
+  top: 6.2rem;
+  z-index: -1;
+}
+
+@media (max-width: 1100px) {
+  #welcome-section {
+    top: 9vh;
+  }
+}
+
+/* Intro Section */
+
+#english-intro {
+  background:linear-gradient(180deg, rgba(252,252,252,0.75) 0%, rgba(253,253,253,0.95) 100%); 
+  width: 100%;
+  padding: 4rem 2rem;
+  line-height: 1.5;
+  display: flex;
+  color: black;
+  margin-top: 90vh;
+}
+
+@media (max-width: 1100px) {
+  #english-intro {
+    padding: 3rem 1rem;
+    margin-top: 70vh;
+  }
+}
+
+#english-intro h1 {
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 1100px) {
+  #english-intro h1 {
+    padding-left: 1rem;
+  }
+}
+#text-container {
+  width: 70%;
+  margin: auto;
+  padding: 1rem;
+}
+
+@media (max-width: 1100px) {
+  #text-container {
+    width: 90%;
+  }
+}
+
+#key {
+  width: 70%;
+  margin: auto;
+  padding: 1rem;
+}
+
+@media (max-width: 1100px) {
+  #key {
+    width: 100%;
+  }
+}  
+
+#key ul {
+  display: flex;
+  justify-content: left;
+}
+
+#key li {
+  padding: 1rem;
+  font-size: 1.3rem;
+  list-style-type: none;
+}
+
+@media (max-width: 1100px) {
+  #key ul {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  #key li {
+    padding: 0.5rem;
+  }
+}
+
+/* Section 1 - 13+ */
+
+#section1 {
+  width: 100%;
+  background:rgba(15, 102, 173,0.95);
+  line-height: 1.5;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+#section1 p {
+  padding-bottom: 1rem;
+}
+
+#section1 ul {
+  padding-bottom: 1rem;
+}
+
+#section1 li {
+  font-size: 1.1rem;
+}
+
+#section1-text {
+  width: 60%;
+  margin: auto;
+  padding: 1rem;
+  list-style-position: inside;
+}
+
+@media (max-width: 1100px) {
+  #section1-text {
+    width: 90%;
+  }
+}
+
+/* Section 2 - GCSE */
+
+#section2 {
+  background-color: rgba(253,253,253,0.9);
+  color: black;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+} 
+
+#section2-text {
+  width: 60%;
+  padding: 1rem;
+  margin: auto;
+}
+
+@media (max-width: 1100px) {
+  #section2-text {
+    width: 90%;
+  }
+}
+
+/* Section 3 - A-Level */
+
+#section3 {
+background-color: rgba(22,55,120,0.95);
+color: white;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+}  
+
+#section3-text {
+  width: 60%;
+  padding: 2rem 1rem;
+  list-style-position: inside;
+}
+
+@media (max-width: 1100px) {
+  #section3-text {
+    width: 90%;
+  }
+}
+
+#section3 li {
+  line-height: 1.7;
+}
+
+/* Section 4 - TEFL */
+
+#section4 {
+  background-color: white;
+  color: black;
+  padding: 5rem 2rem 4rem 2rem;
+  display: flex;
+}
+
+@media (max-width: 1100px) {
+  #section4 {
+    flex-wrap: wrap;
+    padding: 4rem 0rem;
+  }
+}
+
+#section4-text {
+  width: 70%;
+  padding: 1rem 5rem;
+}
+
+@media (max-width: 1100px) {
+  #section4-text {
+    width: 90%;
+    padding: 1rem 3rem;
+  }
+}
+
+#image-container {
+  width: 30%;
+  padding: 1rem;
+}
+
+@media (max-width: 1100px) {
+  #image-container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+#image-container img {
+  max-width: 300px;
+}
+
+@media (max-width: 1100px) {
+  #image-container img {
+    max-width: 85%;
+  }
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  background-color: #183781;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+}
+
+footer p {
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+#year {
+  font-family: "Noto Sans KR", sans-serif;
+}

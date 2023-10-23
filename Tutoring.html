@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Ben Thompson Tutoring - Tutoring</title>
+  <link
+    href="./Resources/CSS/Tutoring-v8.css"
+    type="text/css"
+    rel="stylesheet"
+  />
+  <script src="./Resources/Javascript/Mobile Nav.js" defer></script>
+  <script src="./Resources/Javascript/year.js" defer></script>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&display=swap"
+    rel="stylesheet"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="I offer tutoring online and at your home. Prices from £45/hour"  />
+</head>
+
+<header>
+  <nav id="navbar">
+    <img class="tutoring-logo" src="Resources/Images/14.png" alt="Ben Thompson Tutoring Logo" />
+    <ul id="web-menu">
+      <li><a href="./About Me.html">About Me </a></li>
+      <li>
+        <div class="dropdown">
+          <a href="./Tutoring.html">Tutoring </a>
+          <div class="dropdown-content">
+            <ul>
+              <li><a href="./Tutoring.html#home-link"> Home </a></li>
+              <li><a href="./Tutoring.html#online-link"> Online </a></li>
+              <li><a href="./Tutoring.html#pricing"> Pricing </a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="dropdown">
+          <a href="./English.html">English</a>
+          <div class="dropdown-content">
+            <ul>
+              <li><a href="./English.html#section1-link"> 13+ </a></li>
+              <li><a href="./English.html#section2-link"> GCSE </a></li>
+              <li><a href="./English.html#section3-link"> A-Level </a></li>
+              <li><a href="./English.html#section4-link"> EFL </a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="dropdown">
+          <a href="./Maths.html"> Maths </a>
+          <div class="dropdown-content">
+            <ul>
+              <li><a href="./Maths.html#section1-link"> 13+ </a></li>
+              <li><a href="./Maths.html#section2-link"> GCSE </a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li><a href="./Testimonials.html"> Testimonials </a></li>
+      <li><a href="./Contact.html"> Contact </a></li>
+      <li></li>
+    </ul>
+
+    <div id="mobile-menu">
+      <img
+        src="Resources/Images/icons8-menu-48.png"
+        class="dropbtn"
+        onclick="myFunction()"
+        alt="Mobile Menu Button"
+      />
+      <div id="mobile-dropdown" class="mobile-dropdown-content">
+        <a href="./About Me.html">About Me </a>
+        <a href="./Tutoring.html">Tutoring </a>
+        <a href="./English.html">English</a>
+        <a href="./Maths.html"> Maths </a>
+        <a href="./Testimonials.html"> Testimonials </a>
+        <a href="./Contact.html"> Contact </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<body>
+  <div id="welcome-section"></div>
+
+  <div id="home-tutoring">
+    <span class="link" id="home-link"> &nbsp; </span>
+    <div id="text-container">
+      <h1>Home Tutoring</h1>
+
+      <p>
+        I am happy to tutor at your home - I enjoy in-person tutoring as it is
+        often easier to connect with students and guide them when they may be
+        having problems. It also gives me an opportunity to feedback directly to
+        parents and chat about the progress of their son or daughter.
+      </p>
+
+      <p>
+        However, as I am based in Clapham, I can only travel to local areas
+        (approximately within a 3 mile radius). This is because I like to travel
+        by bike, so can't cover huge distances!
+      </p>
+
+      <p>Please see the map for an idea of where I travel to.</p>
+    </div>
+
+    <div id="map-container">
+      <iframe
+        src="https://www.google.com/maps/d/u/0/embed?mid=1ICQZvqexf9K0-2rAF4pLXbsXzJa9PoCf"
+        width="540"
+        height="360"
+        title="In-Person Tutoring Area Map"
+      ></iframe>
+    </div>
+  </div>
+
+  <div id="online-tutoring">
+    <span class="link" id="online-link"> &nbsp; </span>
+    <div id="online-text">
+      <h1>Online Tutoring</h1>
+
+      <p>Since the pandemic, the majority of my tutoring has been online!</p>
+
+      <p>
+        While there can be technical issues to deal with, there are other
+        significant advantages.
+      </p>
+
+      <p>These include:</p>
+      <ul>
+        <li>Flexibility</li>
+        <li>The ability to save and rewatch lessons</li>
+        <li>Tutoring anywhere in the world</li>
+      </ul>
+
+      <p>
+        I usually use a platform called Bramble for my online sessions. It's
+        simple and user-friendly, and I've found it really effective in
+        encouraging students of all ages to work attentively and confidently
+        online.
+      </p>
+    </div>
+
+    <div id="video-container">
+      <iframe
+        width="544"
+        height="306"
+        src="https://www.youtube.com/embed/avzpjj_1u3c"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        title="Bramble Trailer"
+      ></iframe>
+    </div>
+  </div>
+
+  <div id="pricing">
+    <div class="section-left">
+      <h1>Pricing & Details</h1>
+      <div class="table-container">
+        <table>
+          <tr>
+            <th>13+ / GCSE</th>
+            <td>
+              £45
+              <tr>
+                <th>A-Level / IB</th>
+                <td>£50</td>
+              </tr>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div id="pricing-text">
+      <p>My usual hours for tutoring are weekdays from 4 - 8.30pm.</p>
+      <p>
+        Occasionally I do tutor earlier in the day, so please enquire if you're
+        interested in an earlier time. Please note I do not tutor on weekends.
+      </p>
+      <p>Payment is usually by bank transfer in advance of the lesson.</p>
+      <p>
+        There is an additional £10 charge for Home Tutoring, to cover travel
+        time.
+      </p>
+
+      <p>
+        I offer the first session guaranteed, so if you are unhappy for any
+        reason, you can claim a full refund.
+      </p>
+
+      <p>
+        If you need to cancel a session that has already been booked, please get
+        in contact as soon you can. I will always try to rearrange for a
+        different time if possible. Otherwise, for cancellations with under 24
+        hours notice, a cancellation charge of 50% of the full price will apply (if the session cannot be
+        rearranged).
+      </p>
+    </div>
+  </div>
+</body>
+
+<footer>
+  <p>Ben Thompson <span id="year"></span></p>
+</footer>

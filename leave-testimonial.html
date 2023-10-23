@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Ben Thompson Tutoring - Leave Testimonial</title>
+  <link
+    href="./Resources/CSS/Contact-v8.css"
+    type="text/css"
+    rel="stylesheet"
+  />
+  <script src="./Resources/Javascript/Mobile Nav.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Sans+KR&display=swap"
+    rel="stylesheet"
+  />
+  <script src="./Resources/Javascript/year.js" defer></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<header>
+  <nav id="navbar">
+    <img class="tutoring-logo" src="Resources/Images/14.png" />
+    <ul id="web-menu">
+      <li><a href="./About Me.html">About Me </a></li>
+      <li>
+        <div class="dropdown">
+          <a href="./Tutoring.html">Tutoring </a>
+          <div class="dropdown-content">
+            <ul>
+              <li><a href="./Tutoring.html#home-link"> Home </a></li>
+              <li><a href="./Tutoring.html#online-link"> Online </a></li>
+              <li><a href="./Tutoring.html#pricing"> Pricing </a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="dropdown">
+          <a href="./English.html">English</a>
+          <div class="dropdown-content">
+            <ul>
+              <li><a href="./English.html#section1-link"> 13+ </a></li>
+              <li><a href="./English.html#section2-link"> GCSE </a></li>
+              <li><a href="./English.html#section3-link"> A-Level </a></li>
+              <li><a href="./English.html#section4-link"> EFL </a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="dropdown">
+          <a href="./Maths.html"> Maths </a>
+          <div class="dropdown-content">
+            <ul>
+              <li><a href="./Maths.html#section1-link"> 13+ </a></li>
+              <li><a href="./Maths.html#section2-link"> GCSE </a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li><a href="./Testimonials.html"> Testimonials </a></li>
+      <li><a href="./Contact.html"> Contact </a></li>
+      <li></li>
+    </ul>
+
+    <div id="mobile-menu">
+      <img
+        src="Resources/Images/icons8-menu-48.png"
+        class="dropbtn"
+        onclick="myFunction()"
+      />
+      <div id="mobile-dropdown" class="mobile-dropdown-content">
+        <a href="./About Me.html">About Me </a>
+        <a href="./Tutoring.html">Tutoring </a>
+        <a href="./English.html">English</a>
+        <a href="./Maths.html"> Maths </a>
+        <a href="./Testimonials.html"> Testimonials </a>
+        <a href="./Contact.html"> Contact </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<body>
+  <div id="welcome-section">
+    <div id="text-container">
+      <p>
+        Please use the form below to leave a testimonial. 
+      </p>
+
+      <p>
+        Thanks very much for taking the time to leave feedback, it's really appreciated.
+      </p>
+
+      <form action="./Resources/PHP/testimonial.php" method="post">
+        <div class="contact-field">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="visitor_name"
+            pattern="[A-Z\sa-z]{3,20}"
+            required
+          />
+        </div>
+
+        <div class="contact-field">
+          <textarea
+            id="message"
+            name="visitor_message"
+            placeholder="Write your message"
+            required
+          ></textarea>
+        </div>
+
+      <div class="g-recaptcha" data-sitekey="6LcxIZ0jAAAAAPDdnz_WR9pxukMOtk0SB8-5_XiW"></div>
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <div id="image-container">
+      <img src="./Resources/Images/pen and paper.jpg" />
+    </div>
+  </div>
+</body>
+
+<footer>
+  <p>Ben Thompson <span id="year"></span></p>
+</footer>

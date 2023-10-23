@@ -1,0 +1,616 @@
+/* General */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    font-family: "Libre Baskerville", serif;
+    box-sizing: border-box;
+    color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+html,
+body {
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.6rem;
+  padding-bottom: 2rem;
+}
+
+p {
+  font-family: "Noto Sans KR", sans-serif;
+  padding-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+
+/* Nav bar */
+
+nav {
+  width: 100%;
+  position: fixed;
+  background-color: #183781;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+nav a {
+  display: block;
+  padding: 2.5rem 1.2rem;
+  min-width: 150px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #45567d;
+}
+
+.tutoring-logo {
+  float: left;
+  max-width: 140px;
+  z-index: 2;
+  margin: 1rem;
+  align-self: flex-start;
+}
+
+@media (max-width: 1100px) {
+  .tutoring-logo {
+    max-width: none;
+    width: 15vh;
+    height: 8vh;
+    padding: 1vh;
+    margin: 0.5vh;
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.dropdown-content ul {
+  flex-direction: column;
+  background-color: #183781;
+  min-width: 100px;
+  list-style-type: none;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.6rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media (max-width: 1100px) {
+  #web-menu {
+    display: none;
+  }
+}
+
+#mobile-menu {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  #mobile-menu {
+    display: initial;
+  }
+}
+
+/*Mobile Menu*/
+/* Dropdown Button */
+.dropbtn {
+  color: #183781;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  width: 4.5vh;
+  height: 4.5vh;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.mobile-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.mobile-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #183781;
+  opacity: 0.9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 9vh;
+  left: 0;
+  width: 100%;
+}
+
+/* Links inside the dropdown */
+.mobile-dropdown-content a {
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem 0.5rem;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* Change color of dropdown links on hover */
+.mobile-dropdown-content a:hover {
+  background-color: #45567d;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+/* 1st section */
+
+#welcome-section {
+  display: flex;
+  width: 100%;
+  background: white;
+  line-height: 1.5;
+  padding-top: 12rem;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 1100px) {
+  #welcome-section {
+    flex-wrap: wrap;
+    padding-top: 12vh;
+    padding: 12vh 2vw 4vh 2vw;
+  }
+}
+
+#img-container {
+  width: 45%;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  #img-container {
+    width: 100%;
+  }
+}
+
+#welcome-section img {
+  max-width: 47.5%;
+}
+
+#description {
+  width: 50%;
+}
+
+@media (max-width: 1100px) {
+  #description {
+    width: 90%;
+    margin: auto;
+    padding-top: 3rem;
+  }
+}
+
+#description .text-container {
+  width: 80%;
+  margin: auto;
+}
+
+#welcome-section h1 {
+  color: #3d3d3d;
+  text-decoration: none;
+  padding: 0;
+}
+
+#welcome-section p {
+  color: black;
+}
+
+#welcome-section ol {
+  line-height: 1.5;
+  padding-bottom: 0.5rem;
+}
+
+#welcome-section li {
+  color: black;
+  font-size: 1.1rem;
+  list-style-position: inside;
+}
+
+/* Carousel */
+
+#slider {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0 3rem 0;
+}
+
+.slide {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.showing {
+  opacity: 1;
+  height: auto;
+  margin: auto;
+  width: 80%;
+}
+
+.slider-button {
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .slider-button {
+    width: 5vw;
+    height: 5vw;
+  }
+}
+
+.button-left {
+  left: -10px;
+}
+.button-right {
+  right: -10px;
+}
+
+/* CV section */
+
+#cv-section {
+  background: linear-gradient(
+    326deg,
+    rgba(23, 100, 161, 1) 0%,
+    rgba(27, 60, 139, 1) 100%
+  );
+  width: 100%;
+  padding: 4rem 2.5rem;
+  line-height: 1.5;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1100px) {
+  #cv-section {
+    padding: 5vh 2vw 3vh 2vw;
+  }
+}
+
+#cv-section h2 {
+  font-size: 1.1rem;
+  padding-top: 1.4rem;
+  padding-bottom: 1rem;
+}
+
+#cv-section h3 {
+  font-size: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+#experience {
+  width: 100%;
+  padding: 2rem 10rem;
+}
+
+@media (max-width: 1100px) {
+  #experience {
+    width: 80%;
+    margin: auto;
+    padding: 0;
+  }
+}
+
+#experience p {
+  padding-bottom: 1.5rem;
+}
+
+.logo {
+  max-width: 150px;
+  height: 70px;
+  object-fit: contain;
+  background-color: white;
+  border-radius: 5%;
+  padding-top: 5rem;
+  padding: 0.5rem;
+  margin: 1rem;
+  transition: transform 0.2s ease-out;
+}
+
+@media (max-width: 1100px) {
+  .logo {
+    width: 20vw;
+    height: 10vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 25vw;
+    height: 13vw;
+  }
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+#tutoring-sites-logos {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1100px) {
+  #tutoring-sites-logos {
+    width: 100%;
+  }
+}
+
+#cv-section table {
+  padding: 1.5rem 4rem;
+}
+
+td {
+  padding: 0.25rem;
+  vertical-align: top;
+}
+
+th {
+  padding: 0.25rem;
+  padding-right: 1rem;
+  vertical-align: top;
+  text-align: left;
+}
+
+@media (max-width: 1100px) {
+  #cv-section table {
+    padding-left: 0rem;
+    padding-right: 2rem;
+  }
+
+  th {
+    padding: 0.5rem 20vw 0.5rem 0.5rem;
+  }
+
+  td {
+    padding: 0.5rem;
+  }
+}
+
+#education {
+  width: 80%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  padding: 3rem;
+  background-color: rgba(161, 197, 207, 0.2);
+  line-height: 1.5;
+  border-radius: 1%;
+}
+
+@media (max-width: 1100px) {
+  #education {
+    width: 96%;
+  }
+}
+
+#education h1 {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+#education p {
+  font-size: 1.1rem;
+  padding-top: 1.4rem;
+  font-family: "Libre Baskerville";
+  line-height: 2;
+}
+
+#education ul {
+  padding: 2rem 3rem;
+}
+
+@media (max-width: 1100px) {
+  #education ul {
+    padding: 0;
+  }
+}
+
+#education li {
+  font-size: 1.2rem;
+  list-style-position: inside;
+  line-height: 2.5;
+}
+
+@media (max-width: 1100px) {
+  #education p {
+    padding-left: 0rem;
+  }
+}
+
+#education-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto auto auto;
+  grid-row-gap: 1rem;
+  grid-column-gap: 2rem;
+  padding: 2rem;
+}
+
+@media (max-width: 1100px) {
+  #education-grid {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(8, auto);
+    grid-row-gap: 0;
+    padding: 2rem 0 0 0;
+  }
+}
+
+.item2,
+.item4,
+.item6 {
+  align-self: center;
+}
+
+.item2,
+.item4 {
+  max-width: 95%;
+}
+
+/* Interests Section */
+
+#interests-section {
+  width: 100%;
+  background: white;
+  line-height: 1.5;
+  padding: 5rem 7rem;
+  display: flex;
+}
+
+@media (max-width: 1100px) {
+  #interests-section {
+    flex-wrap: wrap;
+    padding: 5vh 2vw 3vh 2vw;
+  }
+}
+
+#interests-section h1 {
+  color: black;
+}
+
+#interests-section p {
+  font-size: 1rem;
+  padding-bottom: 1.5rem;
+  color: black;
+}
+
+#interests-section li {
+  font-size: 1.1rem;
+  color: black;
+}
+
+#interests-container {
+  width: 70%;
+  background-color: rgba(44, 102, 236, 0.15);
+  list-style-position: inside;
+  padding: 2rem;
+  border-radius: 1%;
+}
+
+@media (max-width: 1100px) {
+  #interests-container {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+#image-container {
+  width: 20%;
+  margin: auto;
+}
+
+@media (max-width: 1100px) {
+  #image-container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 2rem;
+  }
+}
+
+#image-container img {
+  max-width: 250px;
+}
+
+@media (max-width: 1100px) {
+  #image-container img {
+    max-width: none;
+  }
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  background-color: #183781;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+}
+
+footer p {
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+#year {
+  font-family: "Noto Sans KR", sans-serif;
+}
